@@ -553,9 +553,9 @@
             <sum-of-error-squares value="0.03010598472555995" units="Millimeters"/>
          </feeder>
          <feeder class="org.openpnp.machine.reference.feeder.ReferencePushPullFeeder" version="1.1" id="FDR17d3f9b67f98fb01" name="LEFT_1" enabled="true" part-id="R0402-1K" retry-count="2" feed-retry-count="2" pick-retry-count="2" rotation-in-feeder="0.0" normalize-pick-location="true" snap-to-axis="true" used-as-template="true" calibrate-motion-x="true" calibrate-motion-y="true" feed-multiplier="1" feed-speed-push-2="0.5" feed-speed-push-3="0.5" feed-speed-push-end="0.5" feed-speed-pull-3="1.0" feed-speed-pull-2="1.0" feed-speed-pull-1="1.0" feed-speed-pull-0="1.0" included-push-1="false" included-push-2="false" included-push-3="true" included-push-end="true" included-multi-0="false" included-multi-1="false" included-multi-2="false" included-multi-3="false" included-multi-end="false" included-pull-0="false" included-pull-1="false" included-pull-2="false" included-pull-3="false" additive-rotation="true" actuator-name="LFEED" feed-count="89" pipeline-type="CircularSymmetry" ocr-font-name="Liberation Mono" ocr-font-size-pt="7.0" ocr-wrong-part-action="None" ocr-discover-on-job-start="false" ocr-stop-after-wrong-part="false" calibration-count="4" calibration-tolerance-mm="1.95" sprocket-hole-tolerance-mm="0.6" row-location-tolerance-mm="4.0" row-Z-location-tolerance-mm="1.0" calibrate-max-passes="3" calibrate-tolerance-mm="0.3" calibrate-min-statistic="2" calibration-trigger="UntilConfident">
-            <location units="Millimeters" x="55.39831494041451" y="35.267019177989646" z="-9.4" rotation="0.0"/>
-            <hole-1-location units="Millimeters" x="55.39831494041451" y="38.767019177989646" z="-0.0" rotation="0.0"/>
-            <hole-2-location units="Millimeters" x="59.39831494041451" y="38.767019177989646" z="0.0" rotation="0.0"/>
+            <location units="Millimeters" x="55.598" y="35.267019177989646" z="-9.4" rotation="0.0"/>
+            <hole-1-location units="Millimeters" x="55.598" y="38.767019177989646" z="-0.0" rotation="0.0"/>
+            <hole-2-location units="Millimeters" x="59.598" y="38.767019177989646" z="0.0" rotation="0.0"/>
             <feed-start-location units="Millimeters" x="67.608" y="38.724" z="0.0" rotation="0.0"/>
             <feed-mid-1-location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
             <feed-mid-2-location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
