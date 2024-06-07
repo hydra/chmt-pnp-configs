@@ -84,6 +84,8 @@ Solution 1: it was found that when using the ReferenceAdvanceMotionPlanner witho
 ### Drag pin hole not in the right position for the next feed operation
 
 Hole is to the right of the drag pin location. 
+
 Solution 1: peeler grub screws too tight and the cover tape is pulling the tape after the pin has been removed.
 * loosen the grub screw.
+
 Solution 2: adjust the end position left slightly.
