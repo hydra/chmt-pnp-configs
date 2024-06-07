@@ -338,9 +338,9 @@
                   <head-offsets units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
                   <safe-z value="0.0" units="Millimeters"/>
                </actuator>
-               <actuator class="org.openpnp.machine.reference.ReferenceActuator" axis-X-id="AXS16426decf928a508" axis-Y-id="AXS16426decf933bf9c" id="ACT1579799796417" name="DRAGPIN" value-type="Boolean" value-type-confirmed="false" default-on-double="0.0" default-on-string="" default-off-double="0.0" default-off-string="" interlock-actuator="true" driver-id="DRV16426decf5f501b0" coordinated-before-actuate="true" coordinated-after-actuate="false" coordinated-before-read="false" enabled-actuation="ActuateOff" homed-actuation="LeaveAsIs" disabled-actuation="LeaveAsIs" index="0">
+               <actuator class="org.openpnp.machine.reference.ReferenceActuator" axis-X-id="AXS16426decf928a508" axis-Y-id="AXS16426decf933bf9c" id="ACT1579799796417" name="DRAGPIN" value-type="Boolean" value-type-confirmed="false" default-on-double="0.0" default-on-string="" default-off-double="0.0" default-off-string="" interlock-actuator="true" driver-id="DRV16426decf5f501b0" coordinated-before-actuate="true" coordinated-after-actuate="true" coordinated-before-read="false" enabled-actuation="ActuateOff" homed-actuation="LeaveAsIs" disabled-actuation="LeaveAsIs" index="0">
                   <interlock-monitor class="org.openpnp.machine.reference.ActuatorInterlockMonitor" confirmation-good-min="0.0" confirmation-good-max="0.0" confirmation-by-regex="false" conditional-actuator-state="SwitchedOn" conditional-speed-min="0.0" conditional-speed-max="1.0"/>
-                  <head-offsets units="Millimeters" x="43.7" y="19.33" z="0.0" rotation="0.0"/>
+                  <head-offsets units="Millimeters" x="43.8" y="19.33" z="0.0" rotation="0.0"/>
                   <safe-z value="0.0" units="Millimeters"/>
                </actuator>
                <actuator class="org.openpnp.machine.reference.ReferenceActuator" id="ACT16c8e3a3bffc6c20" name="VAC" value-type="Double" value-type-confirmed="true" default-on-double="1.0" default-on-string="" default-off-double="0.0" default-off-string="" interlock-actuator="false" driver-id="DRV16426decf5f501b0" coordinated-before-actuate="false" coordinated-after-actuate="false" coordinated-before-read="false" enabled-actuation="ActuateOff" homed-actuation="LeaveAsIs" disabled-actuation="ActuateOff" index="0">
@@ -365,7 +365,7 @@
                   <head-offsets units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
                </actuator>
                <actuator class="org.openpnp.machine.reference.ReferenceActuator" axis-X-id="AXS16426decf928a508" axis-Y-id="AXS16426decf933bf9c" axis-Z-id="AXS16426decf9372a38" axis-rotation-id="AXS17d61356d36c0144" id="ACT17d6a76c656ab5a0" name="LFEED" value-type="Profile" value-type-confirmed="true" default-on-double="0.0" default-on-string="" default-off-double="0.0" default-off-string="" interlock-actuator="false" driver-id="DRV16426decf5f501b0" coordinated-before-actuate="true" coordinated-after-actuate="false" coordinated-before-read="false" enabled-actuation="AssumeActuatedOff" homed-actuation="LeaveAsIs" disabled-actuation="LeaveAsIs" index="0">
-                  <head-offsets units="Millimeters" x="43.7" y="19.33" z="0.0" rotation="0.0"/>
+                  <head-offsets units="Millimeters" x="43.8" y="19.33" z="0.0" rotation="0.0"/>
                   <actuator-profiles actuator-1-id="ACT1579799796417">
                      <profiles>
                         <profile name="ON" default-on="true" default-off="false">
@@ -376,7 +376,7 @@
                   </actuator-profiles>
                </actuator>
                <actuator class="org.openpnp.machine.reference.ReferenceActuator" axis-X-id="AXS16426decf928a508" axis-Y-id="AXS16426decf933bf9c" axis-Z-id="AXS16426decf9372a38" axis-rotation-id="AXS17d6139a336a93c4" id="ACT17d6a776eabe64b8" name="RFEED" value-type="Profile" value-type-confirmed="true" default-on-double="0.0" default-on-string="" default-off-double="0.0" default-off-string="" interlock-actuator="false" driver-id="DRV16426decf5f501b0" coordinated-before-actuate="true" coordinated-after-actuate="false" coordinated-before-read="false" enabled-actuation="AssumeActuatedOff" homed-actuation="LeaveAsIs" disabled-actuation="LeaveAsIs" index="0">
-                  <head-offsets units="Millimeters" x="43.7" y="19.33" z="0.0" rotation="0.0"/>
+                  <head-offsets units="Millimeters" x="43.8" y="19.33" z="0.0" rotation="0.0"/>
                   <actuator-profiles actuator-1-id="ACT1579799796417">
                      <profiles>
                         <profile name="ON" default-on="true" default-off="false">
@@ -552,7 +552,7 @@
             <sum-of-errors value="0.31039131151652954" units="Millimeters"/>
             <sum-of-error-squares value="0.03010598472555995" units="Millimeters"/>
          </feeder>
-         <feeder class="org.openpnp.machine.reference.feeder.ReferencePushPullFeeder" version="1.1" id="FDR17d3f9b67f98fb01" name="LEFT_1" enabled="true" part-id="R0402-1K" retry-count="2" feed-retry-count="2" pick-retry-count="2" rotation-in-feeder="0.0" normalize-pick-location="true" snap-to-axis="true" used-as-template="true" calibrate-motion-x="true" calibrate-motion-y="true" feed-multiplier="1" feed-speed-push-2="1.0" feed-speed-push-3="0.5" feed-speed-push-end="0.5" feed-speed-pull-3="0.25" feed-speed-pull-2="0.5" feed-speed-pull-1="1.0" feed-speed-pull-0="0.5" included-push-1="false" included-push-2="false" included-push-3="true" included-push-end="true" included-multi-0="false" included-multi-1="false" included-multi-2="false" included-multi-3="false" included-multi-end="false" included-pull-0="false" included-pull-1="false" included-pull-2="false" included-pull-3="false" additive-rotation="true" actuator-name="LFEED" feed-count="16" pipeline-type="CircularSymmetry" ocr-font-name="Liberation Mono" ocr-font-size-pt="7.0" ocr-wrong-part-action="None" ocr-discover-on-job-start="false" ocr-stop-after-wrong-part="false" calibration-count="4" calibration-tolerance-mm="1.95" sprocket-hole-tolerance-mm="0.6" row-location-tolerance-mm="4.0" row-Z-location-tolerance-mm="1.0" calibrate-max-passes="3" calibrate-tolerance-mm="0.3" calibrate-min-statistic="2" calibration-trigger="UntilConfident">
+         <feeder class="org.openpnp.machine.reference.feeder.ReferencePushPullFeeder" version="1.1" id="FDR17d3f9b67f98fb01" name="LEFT_1" enabled="true" part-id="R0402-1K" retry-count="2" feed-retry-count="2" pick-retry-count="2" rotation-in-feeder="0.0" normalize-pick-location="true" snap-to-axis="true" used-as-template="true" calibrate-motion-x="true" calibrate-motion-y="true" feed-multiplier="1" feed-speed-push-2="0.5" feed-speed-push-3="0.5" feed-speed-push-end="0.5" feed-speed-pull-3="1.0" feed-speed-pull-2="1.0" feed-speed-pull-1="1.0" feed-speed-pull-0="1.0" included-push-1="false" included-push-2="false" included-push-3="true" included-push-end="true" included-multi-0="false" included-multi-1="false" included-multi-2="false" included-multi-3="false" included-multi-end="false" included-pull-0="false" included-pull-1="false" included-pull-2="false" included-pull-3="false" additive-rotation="true" actuator-name="LFEED" feed-count="89" pipeline-type="CircularSymmetry" ocr-font-name="Liberation Mono" ocr-font-size-pt="7.0" ocr-wrong-part-action="None" ocr-discover-on-job-start="false" ocr-stop-after-wrong-part="false" calibration-count="4" calibration-tolerance-mm="1.95" sprocket-hole-tolerance-mm="0.6" row-location-tolerance-mm="4.0" row-Z-location-tolerance-mm="1.0" calibrate-max-passes="3" calibrate-tolerance-mm="0.3" calibrate-min-statistic="2" calibration-trigger="UntilConfident">
             <location units="Millimeters" x="55.39831494041451" y="35.267019177989646" z="-9.4" rotation="0.0"/>
             <hole-1-location units="Millimeters" x="55.39831494041451" y="38.767019177989646" z="-0.0" rotation="0.0"/>
             <hole-2-location units="Millimeters" x="59.39831494041451" y="38.767019177989646" z="0.0" rotation="0.0"/>
@@ -1126,11 +1126,11 @@
             <board-location-tolerance value="5.0" units="Millimeters"/>
          </tolerances>
       </fiducial-locator>
-      <motion-planner class="org.openpnp.machine.reference.driver.ReferenceAdvancedMotionPlanner" maximum-plan-history="60.0" allow-continuous-motion="true" allow-uncoordinated="false" diagnostics-enabled="true" interpolation-retiming="false" minimum-speed="0.05" show-approximation="true" to-mid-1-speed="1.0" to-mid-2-speed="1.0" to-end-speed="1.0" start-location-enabled="true" mid-1-location-enabled="true" mid-2-location-enabled="true" end-location-enabled="true" to-mid-1-safe-z="true" to-mid-2-safe-z="true" to-end-safe-z="true">
-         <start-location units="Millimeters" x="60.0" y="0.0" z="0.0" rotation="-90.0"/>
-         <mid-location-1 units="Millimeters" x="60.0" y="0.0" z="0.0" rotation="90.0"/>
-         <mid-location-2 units="Millimeters" x="60.0" y="0.0" z="0.0" rotation="-90.0"/>
-         <end-location units="Millimeters" x="60.0" y="0.0" z="0.0" rotation="90.0"/>
+      <motion-planner class="org.openpnp.machine.reference.driver.ReferenceAdvancedMotionPlanner" maximum-plan-history="60.0" allow-continuous-motion="true" allow-uncoordinated="false" diagnostics-enabled="false" interpolation-retiming="true" minimum-speed="0.05" show-approximation="true" to-mid-1-speed="1.0" to-mid-2-speed="1.0" to-end-speed="1.0" start-location-enabled="false" mid-1-location-enabled="false" mid-2-location-enabled="false" end-location-enabled="false" to-mid-1-safe-z="true" to-mid-2-safe-z="true" to-end-safe-z="true">
+         <start-location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
+         <mid-location-1 units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
+         <mid-location-2 units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
+         <end-location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
       </motion-planner>
       <home-after-enabled>false</home-after-enabled>
       <park-after-homed>true</park-after-homed>
