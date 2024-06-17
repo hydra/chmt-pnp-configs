@@ -355,7 +355,7 @@
                <actuator class="org.openpnp.machine.reference.ReferenceActuator" axis-rotation-id="AXS17d61356d36c0144" id="ACT16d1c9557b283110" name="LPEELER_12MM" value-type="Boolean" value-type-confirmed="false" default-on-double="0.0" default-on-string="" default-off-double="0.0" default-off-string="" interlock-actuator="false" driver-id="DRV16426decf5f501b0" coordinated-before-actuate="true" coordinated-after-actuate="false" coordinated-before-read="false" enabled-actuation="AssumeUnknown" homed-actuation="LeaveAsIs" disabled-actuation="LeaveAsIs" index="0">
                   <head-offsets units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
                </actuator>
-               <actuator class="org.openpnp.machine.reference.ReferenceActuator" id="ACT16d5c5f620d30cd4" name="DOWNLED" value-type="Double" value-type-confirmed="true" default-on-double="50.0" default-on-string="" default-off-double="0.0" default-off-string="" interlock-actuator="false" driver-id="DRV16426decf5f501b0" coordinated-before-actuate="false" coordinated-after-actuate="false" coordinated-before-read="false" enabled-actuation="AssumeUnknown" homed-actuation="LeaveAsIs" disabled-actuation="LeaveAsIs" index="0">
+               <actuator class="org.openpnp.machine.reference.ReferenceActuator" id="ACT16d5c5f620d30cd4" name="DOWNLED" value-type="Double" value-type-confirmed="true" default-on-double="50.0" default-on-string="" default-off-double="0.0" default-off-string="" interlock-actuator="false" driver-id="DRV16426decf5f501b0" coordinated-before-actuate="false" coordinated-after-actuate="false" coordinated-before-read="false" enabled-actuation="ActuateOn" homed-actuation="LeaveAsIs" disabled-actuation="LeaveAsIs" index="0">
                   <head-offsets units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
                </actuator>
                <actuator class="org.openpnp.machine.reference.ReferenceActuator" axis-rotation-id="AXS17d6139a336a93c4" id="ACT17d613e6a8d6e9e0" name="RPEELER_6MM" value-type="Boolean" value-type-confirmed="false" default-on-double="0.0" default-on-string="" default-off-double="0.0" default-off-string="" interlock-actuator="false" driver-id="DRV16426decf5f501b0" coordinated-before-actuate="true" coordinated-after-actuate="false" coordinated-before-read="false" enabled-actuation="AssumeUnknown" homed-actuation="LeaveAsIs" disabled-actuation="LeaveAsIs" index="0">
@@ -388,7 +388,7 @@
                </actuator>
             </actuators>
             <cameras>
-               <camera class="org.openpnp.machine.reference.camera.OpenPnpCaptureCamera" axis-X-id="AXS16426decf928a508" axis-Y-id="AXS16426decf933bf9c" axis-Z-id="AXS16426decf9322128" axis-rotation-id="AXS16426decf932e478" id="CAM16bf7ab7cd57d6b0" name="Down Looking" looking="Down" auto-visible="true" shown-in-multi-camera-view="true" before-capture-light-on="true" user-action-light-on="true" after-capture-light-off="false" anti-glare-light-off="true" enable-units-per-pixel-3-d="true" auto-view-plane-z="false" max-relative-motion="0.05" min-motion-template-match-score="0.9" min-contrast-range="16.0" settle-method="Euclidean" settle-time-ms="250" settle-timeout-ms="600" settle-threshold="68.0" settle-debounce="3" settle-full-color="false" settle-gaussian-blur="15" settle-gradients="false" settle-mask-circle="1.4142135623730951" settle-contrast-enhance="0.0" settle-diagnostics="true" fps="25.0" suspend-preview-in-tasks="true" capture-try-count="4" capture-try-timeout-ms="2000" rotation="0.159466255878132" flip-x="false" flip-y="false" offset-x="0" offset-y="0" crop-width="0" crop-height="0" scale-width="0" scale-height="0" red-balance="1.0595238095238095" green-balance="1.0" blue-balance="1.072289156626506" red-gamma="0.9999215521159286" green-gamma="0.9966686378748795" blue-gamma="1.003415423082491" deinterlace="false" light-actuator-id="ACT16d5c5f620d30cd4" allow-machine-actuators="false" focus-sensing-method="None" white-balance-lead-fractile="0.8" white-balance-clip-fractile="0.99" white-balance-gamma-fractile="0.5" unique-id="ATM Camera PIL  \\?\usb#vid_2c86&amp;pid_0206&amp;mi_00#7&amp;302747a7&amp;0&amp;0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global" format-id="13" freeze-properties="true">
+               <camera class="org.openpnp.machine.reference.camera.OpenPnpCaptureCamera" axis-X-id="AXS16426decf928a508" axis-Y-id="AXS16426decf933bf9c" axis-Z-id="AXS16426decf9322128" axis-rotation-id="AXS16426decf932e478" id="CAM16bf7ab7cd57d6b0" name="Down Looking" looking="Down" auto-visible="true" shown-in-multi-camera-view="true" before-capture-light-on="true" user-action-light-on="true" after-capture-light-off="false" anti-glare-light-off="true" enable-units-per-pixel-3-d="true" auto-view-plane-z="false" max-relative-motion="0.05" min-motion-template-match-score="0.9" min-contrast-range="16.0" settle-method="Euclidean" settle-time-ms="250" settle-timeout-ms="600" settle-threshold="68.0" settle-debounce="3" settle-full-color="false" settle-gaussian-blur="15" settle-gradients="false" settle-mask-circle="1.4142135623730951" settle-contrast-enhance="0.0" settle-diagnostics="true" fps="25.0" suspend-preview-in-tasks="true" capture-try-count="4" capture-try-timeout-ms="2000" rotation="0.159466255878132" flip-x="false" flip-y="false" offset-x="0" offset-y="0" crop-width="0" crop-height="0" scale-width="0" scale-height="0" red-balance="1.0" green-balance="1.0037356075176835" blue-balance="1.0" red-gamma="0.9819963210039435" green-gamma="1.0360112493290077" blue-gamma="0.9819963210039435" deinterlace="false" light-actuator-id="ACT16d5c5f620d30cd4" allow-machine-actuators="true" focus-sensing-method="None" white-balance-lead-fractile="0.8" white-balance-clip-fractile="0.99" white-balance-gamma-fractile="0.5" unique-id="ATM Camera PIL  \\?\usb#vid_2c86&amp;pid_0206&amp;mi_00#7&amp;302747a7&amp;0&amp;0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global" format-id="13" freeze-properties="true">
                   <units-per-pixel units="Millimeters" x="0.029723993581462396" y="0.029662453222080484" z="-7.684120765748487" rotation="0.0"/>
                   <units-per-pixel-secondary units="Millimeters" x="0.028115823288813097" y="0.02804791067217345" z="-4.684120765748491" rotation="0.0"/>
                   <camera-primary-z value="0.0" units="Millimeters"/>
@@ -443,19 +443,16 @@
                   <focus-provider class="org.openpnp.machine.reference.camera.AutoFocusProvider" averaged-frames="1" focus-speed="0.5" show-diagnostics="true">
                      <focal-resolution value="0.05" units="Millimeters"/>
                   </focus-provider>
-                  <red-color-map length="8">0.08627450980392157, 0.23529411764705882, 0.3607843137254902, 0.4745098039215686, 0.596078431372549, 0.7215686274509804, 0.8431372549019608, 0.9568627450980393</red-color-map>
-                  <green-color-map length="8">0.047058823529411764, 0.1607843137254902, 0.2823529411764706, 0.4117647058823529, 0.5568627450980392, 0.6823529411764706, 0.807843137254902, 0.9294117647058824</green-color-map>
-                  <blue-color-map length="8">0.06274509803921569, 0.19607843137254902, 0.33725490196078434, 0.4823529411764706, 0.6039215686274509, 0.7333333333333333, 0.8588235294117647, 0.9764705882352941</blue-color-map>
                   <back-light-compensation property="BackLightCompensation" value="121" auto="false"/>
                   <brightness property="Brightness" value="0" auto="false"/>
                   <contrast property="Contrast" value="3" auto="false"/>
-                  <exposure property="Exposure" value="-10" auto="false"/>
+                  <exposure property="Exposure" value="-8" auto="false"/>
                   <focus property="Focus" value="0" auto="true"/>
                   <gain property="Gain" value="1" auto="false"/>
                   <gamma property="Gamma" value="84" auto="false"/>
                   <hue property="Hue" value="0" auto="false"/>
                   <power-line-frequency property="PowerLineFrequency" value="2" auto="false"/>
-                  <saturation property="Saturation" value="72" auto="false"/>
+                  <saturation property="Saturation" value="64" auto="false"/>
                   <sharpness property="Sharpness" value="1" auto="false"/>
                   <white-balance property="WhiteBalance" value="4600" auto="false"/>
                   <zoom property="Zoom" value="0" auto="false"/>
@@ -702,7 +699,7 @@
             <sum-of-errors value="0.0" units="Millimeters"/>
             <sum-of-error-squares value="0.0" units="Millimeters"/>
          </feeder>
-         <feeder class="org.openpnp.machine.reference.feeder.ReferencePushPullFeeder" version="1.1" id="FDR17d934d16aabc640" name="LEFT_7_8mm" enabled="false" part-id="UNCONFIGURED" retry-count="3" feed-retry-count="3" pick-retry-count="0" rotation-in-feeder="0.0" normalize-pick-location="true" snap-to-axis="true" used-as-template="false" calibrate-motion-x="true" calibrate-motion-y="true" feed-multiplier="1" feed-speed-push-2="0.5" feed-speed-push-3="0.5" feed-speed-push-end="0.5" feed-speed-pull-3="1.0" feed-speed-pull-2="1.0" feed-speed-pull-1="1.0" feed-speed-pull-0="1.0" included-push-1="false" included-push-2="false" included-push-3="true" included-push-end="true" included-multi-0="false" included-multi-1="false" included-multi-2="false" included-multi-3="false" included-multi-end="false" included-pull-0="false" included-pull-1="false" included-pull-2="false" included-pull-3="false" additive-rotation="true" feed-count="0" pipeline-type="CircularSymmetry" ocr-font-name="Liberation Mono" ocr-font-size-pt="7.0" ocr-wrong-part-action="None" ocr-discover-on-job-start="false" ocr-stop-after-wrong-part="false" calibration-count="0" calibration-tolerance-mm="1.95" sprocket-hole-tolerance-mm="0.6" row-location-tolerance-mm="4.0" row-Z-location-tolerance-mm="1.0" calibrate-max-passes="3" calibrate-tolerance-mm="0.3" calibrate-min-statistic="2" calibration-trigger="UntilConfident">
+         <feeder class="org.openpnp.machine.reference.feeder.ReferencePushPullFeeder" version="1.1" id="FDR17d934d16aabc640" name="LEFT_7_8mm" enabled="false" part-id="UNCONFIGURED" retry-count="3" feed-retry-count="3" pick-retry-count="0" rotation-in-feeder="0.0" normalize-pick-location="true" snap-to-axis="true" used-as-template="false" calibrate-motion-x="true" calibrate-motion-y="true" feed-multiplier="1" feed-speed-push-2="0.5" feed-speed-push-3="0.5" feed-speed-push-end="0.5" feed-speed-pull-3="1.0" feed-speed-pull-2="1.0" feed-speed-pull-1="1.0" feed-speed-pull-0="1.0" included-push-1="false" included-push-2="false" included-push-3="true" included-push-end="true" included-multi-0="false" included-multi-1="false" included-multi-2="false" included-multi-3="false" included-multi-end="false" included-pull-0="false" included-pull-1="false" included-pull-2="false" included-pull-3="false" additive-rotation="true" actuator-name="LFEED" feed-count="0" pipeline-type="CircularSymmetry" ocr-font-name="Liberation Mono" ocr-font-size-pt="7.0" ocr-wrong-part-action="None" ocr-discover-on-job-start="false" ocr-stop-after-wrong-part="false" calibration-count="0" calibration-tolerance-mm="1.95" sprocket-hole-tolerance-mm="0.6" row-location-tolerance-mm="4.0" row-Z-location-tolerance-mm="1.0" calibrate-max-passes="3" calibrate-tolerance-mm="0.3" calibrate-min-statistic="2" calibration-trigger="UntilConfident">
             <location units="Millimeters" x="55.6" y="113.1017807193161" z="-9.4" rotation="0.0"/>
             <hole-1-location units="Millimeters" x="55.6" y="116.6017807193161" z="0.0" rotation="0.0"/>
             <hole-2-location units="Millimeters" x="59.6" y="116.6017807193161" z="0.0" rotation="0.0"/>
@@ -740,7 +737,7 @@
             <sum-of-errors value="0.0" units="Millimeters"/>
             <sum-of-error-squares value="0.0" units="Millimeters"/>
          </feeder>
-         <feeder class="org.openpnp.machine.reference.feeder.ReferencePushPullFeeder" version="1.1" id="FDR17d934d16aabc640" name="LEFT_8_8mm" enabled="false" part-id="UNCONFIGURED" retry-count="3" feed-retry-count="3" pick-retry-count="0" rotation-in-feeder="0.0" normalize-pick-location="true" snap-to-axis="true" used-as-template="false" calibrate-motion-x="true" calibrate-motion-y="true" feed-multiplier="1" feed-speed-push-2="0.5" feed-speed-push-3="0.5" feed-speed-push-end="0.5" feed-speed-pull-3="1.0" feed-speed-pull-2="1.0" feed-speed-pull-1="1.0" feed-speed-pull-0="1.0" included-push-1="false" included-push-2="false" included-push-3="true" included-push-end="true" included-multi-0="false" included-multi-1="false" included-multi-2="false" included-multi-3="false" included-multi-end="false" included-pull-0="false" included-pull-1="false" included-pull-2="false" included-pull-3="false" additive-rotation="true" feed-count="0" pipeline-type="CircularSymmetry" ocr-font-name="Liberation Mono" ocr-font-size-pt="7.0" ocr-wrong-part-action="None" ocr-discover-on-job-start="false" ocr-stop-after-wrong-part="false" calibration-count="0" calibration-tolerance-mm="1.95" sprocket-hole-tolerance-mm="0.6" row-location-tolerance-mm="4.0" row-Z-location-tolerance-mm="1.0" calibrate-max-passes="3" calibrate-tolerance-mm="0.3" calibrate-min-statistic="2" calibration-trigger="UntilConfident">
+         <feeder class="org.openpnp.machine.reference.feeder.ReferencePushPullFeeder" version="1.1" id="FDR17d934d16aabc640" name="LEFT_8_8mm" enabled="false" part-id="UNCONFIGURED" retry-count="3" feed-retry-count="3" pick-retry-count="0" rotation-in-feeder="0.0" normalize-pick-location="true" snap-to-axis="true" used-as-template="false" calibrate-motion-x="true" calibrate-motion-y="true" feed-multiplier="1" feed-speed-push-2="0.5" feed-speed-push-3="0.5" feed-speed-push-end="0.5" feed-speed-pull-3="1.0" feed-speed-pull-2="1.0" feed-speed-pull-1="1.0" feed-speed-pull-0="1.0" included-push-1="false" included-push-2="false" included-push-3="true" included-push-end="true" included-multi-0="false" included-multi-1="false" included-multi-2="false" included-multi-3="false" included-multi-end="false" included-pull-0="false" included-pull-1="false" included-pull-2="false" included-pull-3="false" additive-rotation="true" actuator-name="LFEED" feed-count="0" pipeline-type="CircularSymmetry" ocr-font-name="Liberation Mono" ocr-font-size-pt="7.0" ocr-wrong-part-action="None" ocr-discover-on-job-start="false" ocr-stop-after-wrong-part="false" calibration-count="0" calibration-tolerance-mm="1.95" sprocket-hole-tolerance-mm="0.6" row-location-tolerance-mm="4.0" row-Z-location-tolerance-mm="1.0" calibrate-max-passes="3" calibrate-tolerance-mm="0.3" calibrate-min-statistic="2" calibration-trigger="UntilConfident">
             <location units="Millimeters" x="55.6" y="126.1017807193161" z="-9.4" rotation="0.0"/>
             <hole-1-location units="Millimeters" x="55.6" y="129.60178071931608" z="0.0" rotation="0.0"/>
             <hole-2-location units="Millimeters" x="59.6" y="129.60178071931608" z="0.0" rotation="0.0"/>
@@ -778,7 +775,7 @@
             <sum-of-errors value="0.0" units="Millimeters"/>
             <sum-of-error-squares value="0.0" units="Millimeters"/>
          </feeder>
-         <feeder class="org.openpnp.machine.reference.feeder.ReferencePushPullFeeder" version="1.1" id="FDR17d934d16aabc640" name="LEFT_9_8mm" enabled="false" part-id="UNCONFIGURED" retry-count="3" feed-retry-count="3" pick-retry-count="0" rotation-in-feeder="0.0" normalize-pick-location="true" snap-to-axis="true" used-as-template="false" calibrate-motion-x="true" calibrate-motion-y="true" feed-multiplier="1" feed-speed-push-2="0.5" feed-speed-push-3="0.5" feed-speed-push-end="0.5" feed-speed-pull-3="1.0" feed-speed-pull-2="1.0" feed-speed-pull-1="1.0" feed-speed-pull-0="1.0" included-push-1="false" included-push-2="false" included-push-3="true" included-push-end="true" included-multi-0="false" included-multi-1="false" included-multi-2="false" included-multi-3="false" included-multi-end="false" included-pull-0="false" included-pull-1="false" included-pull-2="false" included-pull-3="false" additive-rotation="true" feed-count="0" pipeline-type="CircularSymmetry" ocr-font-name="Liberation Mono" ocr-font-size-pt="7.0" ocr-wrong-part-action="None" ocr-discover-on-job-start="false" ocr-stop-after-wrong-part="false" calibration-count="0" calibration-tolerance-mm="1.95" sprocket-hole-tolerance-mm="0.6" row-location-tolerance-mm="4.0" row-Z-location-tolerance-mm="1.0" calibrate-max-passes="3" calibrate-tolerance-mm="0.3" calibrate-min-statistic="2" calibration-trigger="UntilConfident">
+         <feeder class="org.openpnp.machine.reference.feeder.ReferencePushPullFeeder" version="1.1" id="FDR17d934d16aabc640" name="LEFT_9_8mm" enabled="false" part-id="UNCONFIGURED" retry-count="3" feed-retry-count="3" pick-retry-count="0" rotation-in-feeder="0.0" normalize-pick-location="true" snap-to-axis="true" used-as-template="false" calibrate-motion-x="true" calibrate-motion-y="true" feed-multiplier="1" feed-speed-push-2="0.5" feed-speed-push-3="0.5" feed-speed-push-end="0.5" feed-speed-pull-3="1.0" feed-speed-pull-2="1.0" feed-speed-pull-1="1.0" feed-speed-pull-0="1.0" included-push-1="false" included-push-2="false" included-push-3="true" included-push-end="true" included-multi-0="false" included-multi-1="false" included-multi-2="false" included-multi-3="false" included-multi-end="false" included-pull-0="false" included-pull-1="false" included-pull-2="false" included-pull-3="false" additive-rotation="true" actuator-name="LFEED" feed-count="0" pipeline-type="CircularSymmetry" ocr-font-name="Liberation Mono" ocr-font-size-pt="7.0" ocr-wrong-part-action="None" ocr-discover-on-job-start="false" ocr-stop-after-wrong-part="false" calibration-count="0" calibration-tolerance-mm="1.95" sprocket-hole-tolerance-mm="0.6" row-location-tolerance-mm="4.0" row-Z-location-tolerance-mm="1.0" calibrate-max-passes="3" calibrate-tolerance-mm="0.3" calibrate-min-statistic="2" calibration-trigger="UntilConfident">
             <location units="Millimeters" x="55.6" y="139.10178071931608" z="-9.4" rotation="0.0"/>
             <hole-1-location units="Millimeters" x="55.6" y="142.60178071931608" z="0.0" rotation="0.0"/>
             <hole-2-location units="Millimeters" x="59.6" y="142.60178071931608" z="0.0" rotation="0.0"/>
@@ -1340,9 +1337,10 @@
                </stages>
             </pipeline>
             <ocr-region rectify="true">
-               <upper-left-corner units="Millimeters" x="-3.0597830664464114" y="0.8588738973705186" z="0.0" rotation="0.0"/>
-               <upper-right-corner units="Millimeters" x="3.0971216166893525" y="0.8837526612446824" z="0.0" rotation="0.0"/>
-               <lower-left-corner units="Millimeters" x="-3.0708233710700124" y="-0.9355448121794174" z="0.0" rotation="0.0"/>
+               <upper-left-corner units="Millimeters" x="-15.751149072077252" y="7.384698960790921" z="0.0" rotation="0.0"/>
+               <upper-right-corner units="Millimeters" x="18.121799583648937" y="7.293247580471529" z="0.0" rotation="0.0"/>
+               <lower-left-corner units="Millimeters" x="-15.751149072077252" y="-5.144140142965812" z="0.0" rotation="0.0"/>
+               <offsets units="Millimeters" x="-3.0" y="-4.999780719316107" z="9.4" rotation="0.0"/>
             </ocr-region>
             <precision-wanted value="0.1" units="Millimeters"/>
             <sum-of-errors value="0.0" units="Millimeters"/>
@@ -1538,7 +1536,7 @@
             <sum-of-errors value="0.0" units="Millimeters"/>
             <sum-of-error-squares value="0.0" units="Millimeters"/>
          </feeder>
-         <feeder class="org.openpnp.machine.reference.feeder.ReferencePushPullFeeder" version="1.1" id="FDR17d934d16aabc640" name="LEFT_29_24mm" enabled="false" part-id="UNCONFIGURED" retry-count="3" feed-retry-count="3" pick-retry-count="0" rotation-in-feeder="0.0" normalize-pick-location="true" snap-to-axis="true" used-as-template="false" calibrate-motion-x="true" calibrate-motion-y="true" feed-multiplier="1" feed-speed-push-2="0.5" feed-speed-push-3="0.5" feed-speed-push-end="0.5" feed-speed-pull-3="1.0" feed-speed-pull-2="1.0" feed-speed-pull-1="1.0" feed-speed-pull-0="1.0" included-push-1="false" included-push-2="false" included-push-3="true" included-push-end="true" included-multi-0="false" included-multi-1="false" included-multi-2="false" included-multi-3="false" included-multi-end="false" included-pull-0="false" included-pull-1="false" included-pull-2="false" included-pull-3="false" additive-rotation="true" feed-count="0" pipeline-type="CircularSymmetry" ocr-font-name="Liberation Mono" ocr-font-size-pt="7.0" ocr-wrong-part-action="None" ocr-discover-on-job-start="false" ocr-stop-after-wrong-part="false" calibration-count="0" calibration-tolerance-mm="1.95" sprocket-hole-tolerance-mm="0.6" row-location-tolerance-mm="4.0" row-Z-location-tolerance-mm="1.0" calibrate-max-passes="3" calibrate-tolerance-mm="0.3" calibrate-min-statistic="2" calibration-trigger="UntilConfident">
+         <feeder class="org.openpnp.machine.reference.feeder.ReferencePushPullFeeder" version="1.1" id="FDR17d934d16aabc640" name="LEFT_29_24mm" enabled="false" part-id="UNCONFIGURED" retry-count="3" feed-retry-count="3" pick-retry-count="0" rotation-in-feeder="0.0" normalize-pick-location="true" snap-to-axis="true" used-as-template="false" calibrate-motion-x="true" calibrate-motion-y="true" feed-multiplier="1" feed-speed-push-2="0.5" feed-speed-push-3="0.5" feed-speed-push-end="0.5" feed-speed-pull-3="1.0" feed-speed-pull-2="1.0" feed-speed-pull-1="1.0" feed-speed-pull-0="1.0" included-push-1="false" included-push-2="false" included-push-3="true" included-push-end="true" included-multi-0="false" included-multi-1="false" included-multi-2="false" included-multi-3="false" included-multi-end="false" included-pull-0="false" included-pull-1="false" included-pull-2="false" included-pull-3="false" additive-rotation="true" actuator-name="LFEED" feed-count="0" pipeline-type="CircularSymmetry" ocr-font-name="Liberation Mono" ocr-font-size-pt="7.0" ocr-wrong-part-action="None" ocr-discover-on-job-start="false" ocr-stop-after-wrong-part="false" calibration-count="0" calibration-tolerance-mm="1.95" sprocket-hole-tolerance-mm="0.6" row-location-tolerance-mm="4.0" row-Z-location-tolerance-mm="1.0" calibrate-max-passes="3" calibrate-tolerance-mm="0.3" calibrate-min-statistic="2" calibration-trigger="UntilConfident">
             <location units="Millimeters" x="62.6" y="438.852" z="-9.4" rotation="0.0"/>
             <hole-1-location units="Millimeters" x="55.6" y="450.3517807193161" z="0.0" rotation="0.0"/>
             <hole-2-location units="Millimeters" x="59.6" y="450.3517807193161" z="0.0" rotation="0.0"/>
@@ -1666,11 +1664,17 @@
                <text><![CDATA[M82 ; Set absolute mode for extruder]]></text>
             </command>
             <command type="HOME_COMMAND">
+               <text><![CDATA[M820   		; Turn on BUZZER]]></text>
+               <text><![CDATA[G4P200 		; Wait 200 milliseconds]]></text>
+               <text><![CDATA[M821   		; Turn off BUZZER]]></text>
                <text><![CDATA[G92.1		; remove any previously applied offsets]]></text>
                <text><![CDATA[G0 Z40		; move Z-axis into free space to allow good homing]]></text>
                <text><![CDATA[G28 Z		; home Z first and apply an offset to compensator for unbalanced z homing position]]></text>
                <text><![CDATA[G92 Z2.4	; apply Z offset to compensator for unbalanced z homing position]]></text>
                <text><![CDATA[G28 X Y		; home X and Y axes]]></text>
+               <text><![CDATA[M820   		; Turn on BUZZER]]></text>
+               <text><![CDATA[G4P100 		; Wait 100 milliseconds]]></text>
+               <text><![CDATA[M821   		; Turn off BUZZER]]></text>
             </command>
             <command type="MOVE_TO_COMMAND">
                <text><![CDATA[{Acceleration:M204 S%.0f} G1 {X:X%.2f} {Y:Y%.2f} {Z:Z%.2f} {A:A%.1f} {B:B%.1f} {C:C%.1f} {D:D%.1f} {FeedRate:F%.0f} ; move to target]]></text>
@@ -1688,7 +1692,7 @@
                <text><![CDATA[M817                                    ; Dragpin release]]></text>
                <text><![CDATA[M814   		; Turn on DOWNLED]]></text>
                <text><![CDATA[M820   		; Turn on BUZZER]]></text>
-               <text><![CDATA[G4P100 		; Wait 100 milliseconds]]></text>
+               <text><![CDATA[G4P250 		; Wait 250 milliseconds]]></text>
                <text><![CDATA[M821   		; Turn off BUZZER]]></text>
                <text><![CDATA[M92 X31.93	; Set X steps/mm]]></text>
                <text><![CDATA[M92 Y31.97	; Set Y steps/mm]]></text>
@@ -1697,12 +1701,20 @@
                <text><![CDATA[; Default DISABLE_COMMAND]]></text>
                <text><![CDATA[M84    ; Disable all steppers]]></text>
                <text><![CDATA[M817   ; Dragpin release]]></text>
-               <text><![CDATA[M815   ; Turn off DOWNLED]]></text>
+               <text><![CDATA[M815   ; Turn off WORKLIGHT]]></text>
+               <text><![CDATA[M823   ; Turn off DOWNLED]]></text>
                <text><![CDATA[M811   ; Turn off UPLED]]></text>
                <text><![CDATA[M813   ; Turn off BLOW]]></text>
                <text><![CDATA[M809   ; Turn off VAC]]></text>
                <text><![CDATA[M801   ; Vacuum nozzle 1 off]]></text>
                <text><![CDATA[M805   ; Vacuum nozzle 2 off]]></text>
+               <text><![CDATA[M820   		; Turn on BUZZER]]></text>
+               <text><![CDATA[G4P100 		; Wait 100 milliseconds]]></text>
+               <text><![CDATA[M821   		; Turn off BUZZER]]></text>
+               <text><![CDATA[G4P100 		; Wait 100 milliseconds]]></text>
+               <text><![CDATA[M820   		; Turn on BUZZER]]></text>
+               <text><![CDATA[G4P100 		; Wait 100 milliseconds]]></text>
+               <text><![CDATA[M821   		; Turn off BUZZER]]></text>
             </command>
             <command type="PUMP_ON_COMMAND">
                <text><![CDATA[; depreciated in V2.0]]></text>
@@ -1906,7 +1918,7 @@
                <text><![CDATA[{False:G92 C0 G0 C14}	; Set absolute position to 0, Move 14mm when switched off]]></text>
             </command>
             <command head-mountable-id="ACT16d5c5f620d30cd4" type="ACTUATE_BOOLEAN_COMMAND">
-               <text><![CDATA[M82{True:2 S10}{False:1} ; DOWNLED M822 on / M823 off]]></text>
+               <text><![CDATA[{True:M822 S50}{False:M823} ; DOWNLED M822 on / M823 off]]></text>
             </command>
             <command head-mountable-id="ACT16d5c5f620d30cd4" type="ACTUATE_DOUBLE_COMMAND">
                <text><![CDATA[M822 S{DoubleValue} ; DOWNLED M822 on / M823 off]]></text>
