@@ -1574,14 +1574,50 @@
             <sum-of-errors value="0.0" units="Millimeters"/>
             <sum-of-error-squares value="0.0" units="Millimeters"/>
          </feeder>
-         <feeder class="org.openpnp.machine.reference.feeder.BlindsFeeder" version="1.1" id="FDR17da0ff730df4b10" name="BlindsFeeder" enabled="false" part-id="R0402-TEST" feed-retry-count="2" pick-retry-count="0" normalize="true" vision-enabled="true" feed-count="18" feeder-no="1" feeders-total="1" feeder-group-name="Default" pocket-count="49" first-pocket="4" last-pocket="49" push-speed="0.1" ocr-action="None" ocr-font-name="Liberation Mono" ocr-font-size-pt="7.0" ocr-text-orientation="AwayFromTape" fid-loc-max-passes="3" fid-loc-tolerance-mm="0.5" pocket-pos-tolerance-mm="0.1" max-label-size-mm="10.0" tape-center-offset-mm="-1.0625" cover-type="PushCover" cover-actuation="Manual">
+         <feeder class="org.openpnp.machine.reference.feeder.BlindsFeeder" version="1.1" id="FDR17da0ff730df4b10" name="BlindsFeeder 1" enabled="true" part-id="R0402-TEST" retry-count="3" feed-retry-count="2" pick-retry-count="0" normalize="true" vision-enabled="true" feed-count="21" feeder-no="1" feeders-total="2" feeder-group-name="Default" pocket-count="49" first-pocket="4" last-pocket="49" push-speed="0.1" ocr-action="None" ocr-font-name="Liberation Mono" ocr-font-size-pt="7.0" ocr-text-orientation="AwayFromTape" fid-loc-max-passes="3" fid-loc-tolerance-mm="0.5" pocket-pos-tolerance-mm="0.1" max-label-size-mm="10.0" tape-center-offset-mm="-1.0625" cover-type="PushCover" cover-actuation="Manual">
             <location units="Millimeters" x="0.0" y="0.0" z="-7.6" rotation="0.0"/>
-            <fiducial-1-location units="Millimeters" x="272.68285059388455" y="85.23455267749479" z="-7.6" rotation="0.0"/>
-            <fiducial-2-location units="Millimeters" x="368.42171683377927" y="84.94694627113493" z="-7.6" rotation="0.0"/>
-            <fiducial-3-location units="Millimeters" x="368.4966258745535" y="109.88278384726748" z="-7.6" rotation="0.0"/>
+            <fiducial-1-location units="Millimeters" x="272.73038734988404" y="85.17117291509123" z="-7.6" rotation="0.0"/>
+            <fiducial-2-location units="Millimeters" x="368.46723815666036" y="84.93766696174373" z="-7.6" rotation="0.0"/>
+            <fiducial-3-location units="Millimeters" x="368.52799153825623" y="109.84639989325422" z="-7.6" rotation="0.0"/>
             <tape-length value="96.0" units="Millimeters"/>
             <feeder-extent value="25.0" units="Millimeters"/>
             <pocket-centerline value="9.1" units="Millimeters"/>
+            <pocket-pitch value="2.0" units="Millimeters"/>
+            <pocket-size value="2.0" units="Millimeters"/>
+            <pipeline>
+               <stages>
+                  <cv-stage class="org.openpnp.vision.pipeline.stages.ImageRead" name="00" enabled="false" file="test.png" color-space="Bgr" handle-as-captured="false"/>
+                  <cv-stage class="org.openpnp.vision.pipeline.stages.ImageCapture" name="0" enabled="true" default-light="true" settle-option="Settle" count="1"/>
+                  <cv-stage class="org.openpnp.vision.pipeline.stages.BlurGaussian" name="1" enabled="true" kernel-size="3" property-name="BlurGaussian"/>
+                  <cv-stage class="org.openpnp.vision.pipeline.stages.AffineWarp" name="ocr1" enabled="true" length-unit="Millimeters" x-0="0.0" y-0="0.0" x-1="0.0" y-1="0.0" x-2="0.0" y-2="0.0" scale="1.0" rectify="true" region-of-interest-property="regionOfInterest"/>
+                  <cv-stage class="org.openpnp.vision.pipeline.stages.ConvertColor" name="ocr2" enabled="false" conversion="Bgr2Gray"/>
+                  <cv-stage class="org.openpnp.vision.pipeline.stages.SimpleOcr" name="OCR" enabled="true" alphabet="0123456789.-+_RCLDQYXJIVAFH%GMKkmuµnp" font-name="Liberation Mono" font-size-pt="7.0" font-max-pixel-size="28" auto-detect-size="false" threshold="0.75" draw-style="OverScaledImage" debug="false" property-name="SimpleOcr"/>
+                  <cv-stage class="org.openpnp.vision.pipeline.stages.ImageRecall" name="11" enabled="true" image-stage-name="1"/>
+                  <cv-stage class="org.openpnp.vision.pipeline.stages.ConvertColor" name="2" enabled="true" conversion="Bgr2HsvFull"/>
+                  <cv-stage class="org.openpnp.vision.pipeline.stages.Normalize" name="3" enabled="false"/>
+                  <cv-stage class="org.openpnp.vision.pipeline.stages.MaskHsv" name="4" enabled="true" auto="false" fraction-to-mask="0.0" hue-min="0" hue-max="255" saturation-min="0" saturation-max="255" value-min="160" value-max="255" soft-edge="0" soft-factor="1.0" invert="true" binary-mask="true" property-name="MaskHsv"/>
+                  <cv-stage class="org.openpnp.vision.pipeline.stages.BlurMedian" name="5" enabled="true" kernel-size="13"/>
+                  <cv-stage class="org.openpnp.vision.pipeline.stages.FindContours" name="7" enabled="true" retrieval-mode="List" approximation-method="Simple"/>
+                  <cv-stage class="org.openpnp.vision.pipeline.stages.FilterContours" name="8" enabled="true" contours-stage-name="7" min-area="1000.0" max-area="100000.0" property-name="FilterContours"/>
+                  <cv-stage class="org.openpnp.vision.pipeline.stages.MinAreaRectContours" name="results" enabled="true" contours-stage-name="8"/>
+                  <cv-stage class="org.openpnp.vision.pipeline.stages.ImageRecall" name="10" enabled="true" image-stage-name="0"/>
+                  <cv-stage class="org.openpnp.vision.pipeline.stages.DrawRotatedRects" name="12" enabled="true" rotated-rects-stage-name="results" thickness="3" draw-rect-center="true" rect-center-radius="20" show-orientation="false"/>
+               </stages>
+            </pipeline>
+            <sprocket-pitch value="4.0" units="Millimeters"/>
+            <edge-open-distance value="2.0" units="Millimeters"/>
+            <edge-closed-distance value="2.0" units="Millimeters"/>
+            <push-Z-offset value="0.25" units="Millimeters"/>
+            <ocr-margin value="20.0" units="Millimeters"/>
+         </feeder>
+         <feeder class="org.openpnp.machine.reference.feeder.BlindsFeeder" version="1.1" id="FDR17da12e8751f0858" name="BlindsFeeder 2" enabled="true" part-id="R0402-TEST" feed-retry-count="3" pick-retry-count="0" normalize="true" vision-enabled="true" feed-count="34" feeder-no="2" feeders-total="2" feeder-group-name="Default" pocket-count="49" first-pocket="1" last-pocket="49" push-speed="0.1" ocr-action="None" ocr-font-name="Liberation Mono" ocr-font-size-pt="7.0" ocr-text-orientation="AwayFromTape" fid-loc-max-passes="3" fid-loc-tolerance-mm="0.5" pocket-pos-tolerance-mm="0.1" max-label-size-mm="10.0" tape-center-offset-mm="-1.0625" cover-type="BlindsCover" cover-actuation="OpenOnJobStart">
+            <location units="Millimeters" x="0.0" y="0.0" z="-7.6" rotation="0.0"/>
+            <fiducial-1-location units="Millimeters" x="272.73038734988404" y="85.17117291509123" z="-7.6" rotation="0.0"/>
+            <fiducial-2-location units="Millimeters" x="368.46723815666036" y="84.93766696174373" z="-7.6" rotation="0.0"/>
+            <fiducial-3-location units="Millimeters" x="368.52799153825623" y="109.84639989325422" z="-7.6" rotation="0.0"/>
+            <tape-length value="96.0" units="Millimeters"/>
+            <feeder-extent value="25.0" units="Millimeters"/>
+            <pocket-centerline value="19.0" units="Millimeters"/>
             <pocket-pitch value="2.0" units="Millimeters"/>
             <pocket-size value="2.0" units="Millimeters"/>
             <pipeline>
@@ -1689,7 +1725,7 @@
             <simulated line-ending-type="LF"/>
             <homing-fiducial-location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
             <detected-firmware><![CDATA[FIRMWARE_NAME:Smoothieware, FIRMWARE_URL:http%3A//smoothieware.org, X-SOURCE_CODE_URL:https%3A//github.com/janm012012/Smoothieware-CHMT, FIRMWARE_VERSION:hydra_chmt-2659a2b5, X-FIRMWARE_BUILD_DATE:Jun  4 2024 16:59:31, X-SYSTEM_CLOCK:168MHz, X-AXES:7, X-PAXES:7, X-GRBL_MODE:0, X-SERIAL_FLOW:NONE, X-CNC:0, X-MSD:1]]></detected-firmware>
-            <reported-axes><![CDATA[ok C: X:57.5300 Y:36.2500 Z:5.9600 A:6.9751 B:0.0000 C:0.0000 D:3.0030]]></reported-axes>
+            <reported-axes><![CDATA[ok C: X:370.3700 Y:85.9300 Z:5.9600 A:179.7768 B:67.5007 C:0.0000 D:0.0000]]></reported-axes>
             <command type="COMMAND_CONFIRM_REGEX">
                <text><![CDATA[^ok.*]]></text>
             </command>
